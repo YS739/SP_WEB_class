@@ -81,6 +81,7 @@
         margin: 20px auto 0px auto;
         padding: 20px;
         box-shadow: 0px 0px 3px 0px gray;
+        display: none;
       }
       .btnn {
         display: flex;
@@ -96,10 +97,10 @@
     </style>
     <script>
       function open_box() {
-        alert("박스 열기");
+        $("#post-box").show();
       }
       function close_box() {
-        alert("박스 닫기");
+        $("#post-box").hide();
       }
     </script>
   </head>

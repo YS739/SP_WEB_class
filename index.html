@@ -95,14 +95,11 @@
       }
     </style>
     <script>
-      let count = 0;
-      function hey() {
-        count += 1;
-        if (count % 2 == 0) {
-          alert("짝수입니다");
-        } else {
-          alert("홀수입니다");
-        }
+      function open_box() {
+        alert("박스 열기");
+      }
+      function close_box() {
+        alert("박스 닫기");
       }
     </script>
   </head>
@@ -110,15 +107,15 @@
   <body>
     <div class="mytitle">
       <h1>내 생애 최고의 영화들</h1>
-      <button onclick="hey()">영화 기록하기</button>
+      <button onclick="open_box()">영화 기록하기</button>
     </div>
 
-    <div class="mypost">
+    <div class="mypost" id="post-box">
       <div class="form-floating mb-3">
         <input
           type="email"
           class="form-control"
-          id="floatingInput"
+          id="url"
           placeholder="name@example.com"
         />
         <label for="floatingInput">영화 URL</label>
@@ -146,12 +143,18 @@
       </div>
       <div class="btnn">
         <button type="button" class="btn btn-dark">기록하기</button>
-        <button type="button" class="btn btn-outline-dark">닫기</button>
+        <button
+          onclick="close_box()"
+          type="button"
+          class="btn btn-outline-dark"
+        >
+          닫기
+        </button>
       </div>
     </div>
 
     <div class="wrap">
-      <div class="row row-cols-1 row-cols-md-4 g-4">
+      <div id="card-box" class="row row-cols-1 row-cols-md-4 g-4">
         <div class="col">
           <div class="card">
             <img

@@ -22,8 +22,9 @@
           url: "http://spartacodingclub.shop/sparta_api/rtan",
           data: {},
           success: function (response) {
-            let url = response["url"];
             let msg = response["msg"];
+            let url = response["url"];
+
             $("#img-rtan").attr("src", url);
             $("#text-rtan").text(msg);
           },
